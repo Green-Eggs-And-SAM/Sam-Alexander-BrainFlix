@@ -1,20 +1,39 @@
-#input_container {
-    position: relative;
-    padding: 0px;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
+@use '../styles/partials/font-styles' as *;
+@use '../styles/partials/variables' as *;
+
+.header {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // background-color: $brainflix-blue;
+        padding: 36px 0;
+        @include mobile-padding;
+    }
 }
+
 #input {
-    height: 20px;
-    margin: 0;
-    padding-left: 30px;
-    padding: 15px;
-}
-#input_img {
-    position: absolute;
-    bottom: 8px;
-    left: 10px;
-    width: 15px;
-    height: 15px;
+    &__container {
+        position: relative;
+        padding: 0px;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__textbox {
+        height: 20px;
+        margin: 0;
+        padding: 15px;
+        padding-left: 40px;
+        border-radius: 5px;
+    }
+
+    &__img {
+        position: absolute;
+        bottom: 8px;
+        left: 10px;
+        width: 15px;
+        height: 15px;
+    }
 }

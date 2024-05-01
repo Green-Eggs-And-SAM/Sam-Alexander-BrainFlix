@@ -1,0 +1,62 @@
+@use '../styles/partials/font-styles' as *;
+@use '../styles/partials/variables' as *;
+
+.comment {
+    padding: $mobile-padding;
+    color: $bandsite-black;
+
+    @include tablet {
+        @include tablet-padding;
+    }
+
+    @include desktop {
+        @include desktop-padding;
+    }
+
+    display: flex;
+    flex-direction: column;
+    &__user {
+        padding: 0rem 1rem 1rem 0;
+        &-icon {
+            width: 36px;
+            height: 36px;
+            @include tablet {
+                width: 48px;
+                height: 48px;
+            }
+            object-fit: cover;
+            border-radius: 50%;
+            background-color: $mercury;
+        }
+    }
+
+    &__user-comment {
+        display: flex;
+        flex-direction: row;
+        padding: 0px;
+        margin: 0px;
+        &--container {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            width: 100%;
+        }
+
+        &--name-date-row {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-between;
+            margin: 0;
+        }
+        &--name-date-row * {
+            margin: 0;
+        }
+    }
+
+    &__dividing-line {
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid $mercury;
+    }
+}

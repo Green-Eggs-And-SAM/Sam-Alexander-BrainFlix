@@ -1,5 +1,13 @@
+// @use './styles/partials/font-styles' as *;
+// @use './styles/partials/variables' as *;
+// @import './styles/partials/font-styles';
+// @import './styles/partials/variables';
+
 * {
     // border: 1px dotted green;
     box-sizing: border-box;
-    font-family: sans-serif; // backup/fallback font in case of failed font load
+    font-family: sans-serif;
+
+    // backup/fallback font in case of failed font load
+    // background-color: $brainflix-blue;
 } /*# sourceMappingURL=bio.css.map */

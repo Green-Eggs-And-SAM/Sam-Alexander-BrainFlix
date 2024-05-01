@@ -1,15 +1,17 @@
 import './Header.scss';
+import search from '../assets/icons/search.svg';
+import logo from '../assets/images/BrainFlix-logo.svg';
 
 function Header() {
     return (
         <>
-            <h1>BrainFlix</h1>
-            <div id="input_container">
-                <input type="text" id="input" value />
-                <img src="../assets/icons/search.svg" id="input_img" />
-            </div>
-
-            <img src="../assets/icons/search.svg" id="input_img" alt="SEARCH" />
+            <section className="header__container">
+                <img src={logo} />
+                <div id="input__container">
+                    <input type="text" id="input__textbox" />
+                    <img src={search} id="input__img" />
+                </div>
+            </section>
         </>
     );
 }
