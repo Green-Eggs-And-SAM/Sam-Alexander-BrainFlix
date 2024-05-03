@@ -1,5 +1,29 @@
+@use '../styles/partials/font-styles' as *;
+@use '../styles/partials/variables' as *;
+
 .sidebar {
-    &__img {
-        width: 20rem;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: $mobile-padding;
+    &__header {
+        padding: $mobile-padding;
+        margin: 0;
+    }
+    &__thumbnail {
+        display: flex;
+        flex-direction: row;
+        margin: 1rem 0;
+        &--img {
+            width: 15rem;
+            border-radius: 1rem;
+        }
+        &--text {
+            margin-left: 1rem;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            justify-content: space-between;
+        }
     }
 }

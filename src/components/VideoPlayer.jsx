@@ -16,6 +16,7 @@ function VideoPlayer(props) {
             <p></p>
             <p>views {props.data.views}</p>
             <p>likes {props.data.likes}</p>
+            <p>{props.data.description}</p>
         </>
     );
 }

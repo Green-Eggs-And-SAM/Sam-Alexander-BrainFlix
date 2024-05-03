@@ -6,6 +6,7 @@ import VideoPlayer from './components/VideoPlayer';
 import videoThumbnails from './data/videos.json';
 import VideosDetails from './data/video-details.json';
 import SideBar from './components/SideBar';
+import CommentForm from './components/CommentList/CommentForm';
 
 function App() {
     // console.log(Videos[0]);
@@ -26,14 +27,17 @@ function App() {
 
     return (
         <>
-            <Header />
-            <VideoPlayer data={featuredVid} />
-            <CommentList comments={featuredVid.comments} />
-            <SideBar
-                videoThumbnails={videoThumbnails}
-                featuredVidID={featuredVid.id}
-                handleClick={handleClick}
-            />
+            <div className="app">
+                <Header />
+                <VideoPlayer data={featuredVid} />
+                <CommentForm commentsLength={featuredVid.comments.length} />
+                <CommentList comments={featuredVid.comments} />
+                <SideBar
+                    videoThumbnails={videoThumbnails}
+                    featuredVidID={featuredVid.id}
+                    handleClick={handleClick}
+                />
+            </div>
         </>
     );
 }
