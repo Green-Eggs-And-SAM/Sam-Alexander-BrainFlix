@@ -1,0 +1,53 @@
+@use '../styles/partials/font-styles' as *;
+@use '../styles/partials/variables' as *;
+
+.video {
+    &__about {
+        // padding: $mobile-padding;
+        // @include tablet {
+        //     @include tablet-padding;
+        // }
+
+        // @include desktop {
+        //     @include desktop-padding;
+        // }
+    }
+
+    &__dividing-line {
+        @include dividing-line-bottom;
+    }
+    &__subheader {
+        display: flex;
+        flex-direction: row;
+        @include tablet {
+            justify-content: space-between;
+        }
+    }
+    &__info-pair {
+        display: flex;
+        flex-direction: column;
+        @include tablet {
+            flex-direction: row;
+        }
+    }
+    &__icon {
+        text-align: baseline;
+        align-items: center;
+        justify-content: center;
+        height: 1.6rem;
+        @include tablet {
+            height: 1.3rem;
+        }
+        margin-right: 1rem;
+    }
+}
+
+.right-margin {
+    margin-right: 2.5rem;
+}
+
+.center-align {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}

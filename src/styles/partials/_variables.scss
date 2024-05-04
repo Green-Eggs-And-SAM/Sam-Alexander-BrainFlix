@@ -30,6 +30,12 @@ $desktop-width: 1280px;
     padding-right: 72px;
 }
 
+@mixin dividing-line-bottom {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid $mercury;
+}
+
 //colors-primary
 $brainflix-black: #323232;
 $brainflix-black-transparent: rgba(32, 32, 32, 0.5);

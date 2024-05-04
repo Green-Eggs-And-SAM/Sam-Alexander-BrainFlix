@@ -1,3 +1,6 @@
+@use '../styles/partials/font-styles' as *;
+@use '../styles/partials/variables' as *;
+
 .video {
     &__player {
         width: 100%;

@@ -2,16 +2,16 @@
 @use '../../styles/partials/variables' as *;
 
 .comment {
-    padding: $mobile-padding;
+    // padding: $mobile-padding;
     color: $brainflix-black;
 
-    @include tablet {
-        @include tablet-padding;
-    }
+    // @include tablet {
+    //     @include tablet-padding;
+    // }
 
-    @include desktop {
-        @include desktop-padding;
-    }
+    // @include desktop {
+    //     @include desktop-padding;
+    // }
 
     display: flex;
     flex-direction: column;

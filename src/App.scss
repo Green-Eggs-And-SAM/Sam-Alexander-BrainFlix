@@ -1,10 +1,10 @@
-// @use './styles/partials/font-styles' as *;
-// @use './styles/partials/variables' as *;
+@use './styles/partials/font-styles' as *;
+@use './styles/partials/variables' as *;
 // @import './styles/partials/font-styles';
 // @import './styles/partials/variables';
 
 * {
-    border: 1px dotted green;
+    // border: 1px dotted green;
     box-sizing: border-box;
     font-family: sans-serif;
 
@@ -15,4 +15,25 @@
 .app {
     display: flex;
     flex-direction: column;
+}
+
+main {
+    padding: $mobile-padding;
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+        @include tablet-padding;
+    }
+
+    @include desktop {
+        @include desktop-padding;
+        flex-direction: row;
+        padding-top: 0;
+    }
+}
+
+.description-comments {
+    @include desktop {
+        padding-top: 1.5rem;
+    }
 }

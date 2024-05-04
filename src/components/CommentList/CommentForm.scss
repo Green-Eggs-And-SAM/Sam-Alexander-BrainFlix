@@ -2,13 +2,13 @@
 @use '../../styles/partials/variables' as *;
 
 .comment-form {
-    padding: $mobile-padding;
-    @include tablet {
-        @include tablet-padding;
-    }
-    @include desktop {
-        @include desktop-padding;
-    }
+    // padding: $mobile-padding;
+    // @include tablet {
+    //     @include tablet-padding;
+    // }
+    // @include desktop {
+    //     @include desktop-padding;
+    // }
 
     &__icon {
         width: 36px;
