@@ -76,6 +76,7 @@
             border-radius: 5px;
             border: 1px solid $mercury;
             background-color: $alabaster;
+            color: $brainflix-black;
             width: 100%;
             font-size: 22px;
         }
@@ -119,6 +120,9 @@
             height: 3rem;
             border-radius: 4px;
             border: none;
+            &:hover {
+                background-color: $brainflix-darkblue;
+            }
         }
         &--icon {
             position: absolute;

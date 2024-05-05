@@ -7,7 +7,7 @@ function SideBar(props) {
     return (
         <>
             <section className="sidebar">
-                <h3 className="sidebar__header">NEXT VIDEOS</h3>
+                <h5 className="sidebar__header">NEXT VIDEOS</h5>
                 <ul>
                     {props.videoThumbnails
                         .filter((video) => video.id !== props.featuredVidID)

@@ -12,20 +12,20 @@ function CommentForm(props) {
     return (
         <>
             <article className="comment-form dividing-line">
-                <h5 className="comment-form__number-of-comments">
+                <h5 className="comment-form__number-of-comments colour__bandsite-black">
                     {props.commentsLength} Comments
                 </h5>
                 <div className="comment-form__icon-form-pair">
                     <img src={defaultIcon} className="comment-form__icon" />
                     <section className="comment-form__container--outer">
-                        <p>JOIN THE CONVERSATION</p>
+                        <p className="colour__silver">JOIN THE CONVERSATION</p>
                         <form className="comment-form__container--inner">
-                            <input
+                            <textarea
                                 className="comment-form__input"
                                 name="textbox"
                                 value="Add a new comment"
                                 onClick={clickHandler}
-                            ></input>
+                            ></textarea>
 
                             <div className="submit-button__container">
                                 <button className="submit-button__button">

@@ -2,16 +2,7 @@
 @use '../../styles/partials/variables' as *;
 
 .comment {
-    // padding: $mobile-padding;
     color: $brainflix-black;
-
-    // @include tablet {
-    //     @include tablet-padding;
-    // }
-
-    // @include desktop {
-    //     @include desktop-padding;
-    // }
 
     display: flex;
     flex-direction: column;
@@ -21,8 +12,8 @@
             width: 36px;
             height: 36px;
             @include tablet {
-                width: 48px;
-                height: 48px;
+                width: 40px;
+                height: 40px;
             }
             object-fit: cover;
             border-radius: 50%;
@@ -40,6 +31,7 @@
             flex-direction: column;
             margin: 0;
             width: 100%;
+            margin-right: 1.5rem;
         }
 
         &--name-date-row {

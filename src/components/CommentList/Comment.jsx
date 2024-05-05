@@ -29,10 +29,16 @@ function Comment(props) {
 
                     <section className="comment__user-comment--container">
                         <div className="comment__user-comment--name-date-row">
-                            <h5>{props.data.name}</h5>
-                            <p>{timestampToDate(props.data.timestamp)}</p>
+                            <h5 className="colour__brainflix-black">
+                                {props.data.name}
+                            </h5>
+                            <p className="colour__silver">
+                                {timestampToDate(props.data.timestamp)}
+                            </p>
                         </div>
-                        <p>{props.data.comment}</p>
+                        <p className="colour__brainflix-black">
+                            {props.data.comment}
+                        </p>
                     </section>
                 </article>
             </div>

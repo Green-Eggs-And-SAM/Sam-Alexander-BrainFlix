@@ -28,20 +28,20 @@ function VideoDescription(props) {
                 controls
             ></video> */}
             <section className="video__about">
-                <h1 className="video__dividing-line desktop-gutter-between-main-and-sidebar">
+                <h1 className="video__dividing-line colour__bandsite-black desktop-gutter-between-main-and-sidebar">
                     {props.data.title}
                 </h1>
                 <div className="video__subheader video__dividing-line">
                     <div className="video__info-pair">
-                        <h5 className="right-margin bottom-margin">
+                        <h5 className="right-margin bottom-margin colour__bandsite-black">
                             By {props.data.channel}
                         </h5>
-                        <p className="right-margin ">
+                        <p className="right-margin colour__silver">
                             {timestampToDate(props.data.Date)}
                         </p>
                     </div>
                     <div className="video__info-pair">
-                        <p className="right-margin center-align">
+                        <p className="right-margin center-align colour__silver">
                             <img
                                 src={viewsIcon}
                                 alt="views "
@@ -49,7 +49,7 @@ function VideoDescription(props) {
                             />
                             {props.data.views}
                         </p>
-                        <p className="center-align desktop-gutter-between-main-and-sidebar">
+                        <p className="center-align colour__silver desktop-gutter-between-main-and-sidebar">
                             <img
                                 src={likesIcon}
                                 alt="likes "
@@ -59,7 +59,7 @@ function VideoDescription(props) {
                         </p>
                     </div>
                 </div>
-                <p className="desktop-gutter-between-main-and-sidebar">
+                <p className="desktop-gutter-between-main-and-sidebar colour__bandsite-black">
                     {props.data.description}
                 </p>
             </section>

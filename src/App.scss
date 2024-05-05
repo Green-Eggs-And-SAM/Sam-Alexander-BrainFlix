@@ -33,13 +33,25 @@ main {
 }
 
 .description-comments {
-    @include desktop {
-        padding-top: 1.5rem;
-    }
+    padding-top: 2.5rem;
 }
 
 .desktop-gutter-between-main-and-sidebar {
     @include desktop {
         padding-right: 1.5rem;
+    }
+}
+
+.colour {
+    &__mercury {
+        color: $mercury;
+    }
+
+    &__brainflix-black {
+        color: $brainflix-black;
+    }
+
+    &__silver {
+        color: $silver;
     }
 }

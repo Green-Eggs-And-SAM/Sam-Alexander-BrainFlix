@@ -2,17 +2,6 @@
 @use '../styles/partials/variables' as *;
 
 .video {
-    &__about {
-        // padding: $mobile-padding;
-        // @include tablet {
-        //     @include tablet-padding;
-        // }
-
-        // @include desktop {
-        //     @include desktop-padding;
-        // }
-    }
-
     &__dividing-line {
         @include dividing-line-bottom;
     }
