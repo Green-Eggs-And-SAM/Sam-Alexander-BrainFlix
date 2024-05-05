@@ -7,3 +7,14 @@
         height: auto;
     }
 }
+.video__player {
+    @include tablet {
+        @include tablet-padding;
+    }
+
+    @include desktop {
+        padding-left: 220px;
+        padding-right: 220px;
+    }
+    background-color: black;
+}

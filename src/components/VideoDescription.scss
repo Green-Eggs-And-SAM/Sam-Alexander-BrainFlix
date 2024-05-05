@@ -46,6 +46,13 @@
     margin-right: 2.5rem;
 }
 
+.bottom-margin {
+    margin-bottom: 1rem;
+    @include tablet {
+        margin-bottom: 0;
+    }
+}
+
 .center-align {
     display: flex;
     flex-direction: row;

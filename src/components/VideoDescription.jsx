@@ -28,13 +28,15 @@ function VideoDescription(props) {
                 controls
             ></video> */}
             <section className="video__about">
-                <h1 className="video__dividing-line">{props.data.title}</h1>
+                <h1 className="video__dividing-line desktop-gutter-between-main-and-sidebar">
+                    {props.data.title}
+                </h1>
                 <div className="video__subheader video__dividing-line">
                     <div className="video__info-pair">
-                        <h5 className="right-margin">
+                        <h5 className="right-margin bottom-margin">
                             By {props.data.channel}
                         </h5>
-                        <p className="right-margin">
+                        <p className="right-margin ">
                             {timestampToDate(props.data.Date)}
                         </p>
                     </div>
@@ -43,11 +45,11 @@ function VideoDescription(props) {
                             <img
                                 src={viewsIcon}
                                 alt="views "
-                                className="video__icon"
+                                className="video__icon bottom-margin"
                             />
                             {props.data.views}
                         </p>
-                        <p className="center-align">
+                        <p className="center-align desktop-gutter-between-main-and-sidebar">
                             <img
                                 src={likesIcon}
                                 alt="likes "
@@ -57,7 +59,9 @@ function VideoDescription(props) {
                         </p>
                     </div>
                 </div>
-                <p>{props.data.description}</p>
+                <p className="desktop-gutter-between-main-and-sidebar">
+                    {props.data.description}
+                </p>
             </section>
         </>
     );

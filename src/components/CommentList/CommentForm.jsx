@@ -3,10 +3,18 @@ import './CommentForm.scss';
 import commentIcon from '../../assets/icons/add_comment.svg';
 
 function CommentForm(props) {
+    function clickHandler(event) {
+        event.preventDefault();
+        if (event.target.value === 'Add a new comment') event.target.value = '';
+        else console.log('do nothing'); //do nothing;
+    }
+
     return (
         <>
             <article className="comment-form dividing-line">
-                <h3>{props.commentsLength} Comments</h3>
+                <h5 className="comment-form__number-of-comments">
+                    {props.commentsLength} Comments
+                </h5>
                 <div className="comment-form__icon-form-pair">
                     <img src={defaultIcon} className="comment-form__icon" />
                     <section className="comment-form__container--outer">
@@ -15,11 +23,13 @@ function CommentForm(props) {
                             <input
                                 className="comment-form__input"
                                 name="textbox"
+                                value="Add a new comment"
+                                onClick={clickHandler}
                             ></input>
 
                             <div className="submit-button__container">
                                 <button className="submit-button__button">
-                                    ADD A COMMENT
+                                    COMMENT
                                 </button>
                                 <img
                                     src={commentIcon}

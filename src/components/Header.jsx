@@ -8,13 +8,18 @@ function Header() {
     return (
         <>
             <section className="header__container">
-                <img src={logo} alt="BrainFlix" />
+                <img
+                    src={logo}
+                    alt="BrainFlix"
+                    className="header__brainflix-logo"
+                />
                 <div className="header__navbar">
                     <div className="header__search-icon-pair">
                         <div className="header__search--container">
                             <input
                                 type="text"
                                 className="header__search--textbox"
+                                value="Search"
                             />
                             <img
                                 src={search}
