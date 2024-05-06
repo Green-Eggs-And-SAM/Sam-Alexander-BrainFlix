@@ -1,8 +1,6 @@
 import './Comment.scss';
 
 function Comment(props) {
-    // console.log('here');
-    // console.log(props.data);
     function timestampToDate(timestamp) {
         let today;
         //if there is a timestamp then format timestamp to date.

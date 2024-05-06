@@ -22,11 +22,6 @@ function VideoDescription(props) {
 
     return (
         <>
-            {/* <video
-                className="video__player"
-                poster={props.data.image}
-                controls
-            ></video> */}
             <section className="video__about">
                 <h1 className="video__dividing-line colour__bandsite-black desktop-gutter-between-main-and-sidebar">
                     {props.data.title}

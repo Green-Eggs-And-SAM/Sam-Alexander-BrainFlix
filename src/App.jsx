@@ -10,18 +10,10 @@ import SideBar from './components/SideBar';
 import CommentForm from './components/CommentList/CommentForm';
 
 function App() {
-    // console.log(Videos[0]);
-    // const featuredVid = Videos[0];
-
     console.log(VideosDetails[0]);
-    // const featuredVid = VideosDetails[0];
     const [featuredVid, setFeaturedVid] = useState(VideosDetails[0]);
 
-    // const setFeaturedVid(){
-
-    // }
     const handleClick = (id) => {
-        //
         const foundVideo = VideosDetails.find((video) => video.id === id);
         setFeaturedVid(foundVideo);
     };

@@ -6,7 +6,7 @@ function CommentForm(props) {
     function clickHandler(event) {
         event.preventDefault();
         if (event.target.value === 'Add a new comment') event.target.value = '';
-        else console.log('do nothing'); //do nothing;
+        else console.log('do nothing');
     }
 
     return (

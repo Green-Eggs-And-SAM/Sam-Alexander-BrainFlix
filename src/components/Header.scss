@@ -6,8 +6,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        // background-color: $brainflix-blue;
-        // padding: 36px 0;
         padding: $mobile-padding;
         @include tablet {
             flex-direction: row;
@@ -126,7 +124,6 @@
         }
         &--icon {
             position: absolute;
-            // bottom: 8px;
             left: 10px;
             width: 2em;
             height: 2em;
