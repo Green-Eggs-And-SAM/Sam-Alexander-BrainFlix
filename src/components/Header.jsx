@@ -19,7 +19,7 @@ function Header() {
                             <input
                                 type="text"
                                 className="header__search--textbox"
-                                value="Search"
+                                defaultValue="Search"
                             />
                             <img
                                 src={search}

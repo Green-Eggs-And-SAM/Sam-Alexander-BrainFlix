@@ -1,4 +1,5 @@
 import './SideBar.scss';
+import axios from 'axios';
 
 function SideBar(props) {
     console.log('sidebar');

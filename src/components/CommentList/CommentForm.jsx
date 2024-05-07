@@ -23,7 +23,7 @@ function CommentForm(props) {
                             <textarea
                                 className="comment-form__input"
                                 name="textbox"
-                                value="Add a new comment"
+                                defaultValue="Add a new comment"
                                 onClick={clickHandler}
                             ></textarea>
 
