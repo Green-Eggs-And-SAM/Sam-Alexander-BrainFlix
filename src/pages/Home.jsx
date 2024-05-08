@@ -23,20 +23,20 @@ function Home() {
     // const featuredVid = thumbnailAPI.getVideo(
     //     '84e96018-4022-434e-80bf-000ce4cd12b8'
     // );
-    const { featuredVidID } = useParams();
-    console.log(featuredVidID);
+    const { id } = useParams();
+    console.log(id);
 
     useEffect(() => {
-        const fetchVideo = async (featuredVidID) => {
-            console.log(featuredVidID);
+        const fetchVideo = async (id) => {
+            console.log(id);
             try {
-                if (!featuredVidID) {
+                if (!id) {
                     console.log('ERROR NO ID');
                     //set to default id
-                    featuredVidID = '84e96018-4022-434e-80bf-000ce4cd12b8';
+                    id = '84e96018-4022-434e-80bf-000ce4cd12b8';
                 }
-                console.log(featuredVidID);
-                const targetURL = `${baseUrl}videos/${featuredVidID}?api_key=${apiKey}`;
+                console.log(id);
+                const targetURL = `${baseUrl}videos/${id}?api_key=${apiKey}`;
                 console.log(targetURL);
                 const response = await axios.get(targetURL);
 
@@ -50,9 +50,9 @@ function Home() {
         };
         setLoading(true);
 
-        console.log(featuredVidID);
-        fetchVideo(featuredVidID);
-    }, []);
+        console.log(id);
+        fetchVideo(id);
+    }, [id]);
 
     // console.log(featuredVid);
     // const handleClick = (id) => {
@@ -70,7 +70,7 @@ function Home() {
     return (
         <>
             <div className="app">
-                <VideoPlayer featuredVidID={featuredVid} />
+                <VideoPlayer featuredVid={featuredVid} />
                 <main>
                     <article className="description-comments">
                         <VideoDescription data={featuredVid} />
@@ -81,7 +81,7 @@ function Home() {
                     </article>
                     <SideBar
                         videoThumbnails={videoThumbnails}
-                        featuredVidID={featuredVid.id}
+                        id={featuredVid.id}
                         apiKey={apiKey}
                     />
                 </main>

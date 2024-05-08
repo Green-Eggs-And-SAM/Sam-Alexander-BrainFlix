@@ -5,7 +5,7 @@ function VideoPlayer(props) {
         <>
             <video
                 className="video__player"
-                poster={props.featuredVidID.image}
+                poster={props.featuredVid.image}
                 controls
             ></video>
         </>
