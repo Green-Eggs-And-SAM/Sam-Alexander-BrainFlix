@@ -11,7 +11,7 @@ function SideBar(props) {
                 <h5 className="sidebar__header">NEXT VIDEOS</h5>
                 <ul>
                     {props.videoThumbnails
-                        .filter((video) => video.id !== props.featuredVidID)
+                        .filter((video) => video.id !== props.id)
                         .map((video) => (
                             <Link
                                 to={`/video-details/${video.id}`}
