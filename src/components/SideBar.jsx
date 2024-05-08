@@ -1,9 +1,9 @@
 import './SideBar.scss';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function SideBar(props) {
-    console.log('sidebar');
-    console.log(props.videoThumbnails);
+    //display all videos except for the featured video
 
     return (
         <>
@@ -13,20 +13,25 @@ function SideBar(props) {
                     {props.videoThumbnails
                         .filter((video) => video.id !== props.featuredVidID)
                         .map((video) => (
-                            <li
+                            <Link
+                                to={`/video-details/${video.id}`}
                                 key={video.id}
-                                onClick={() => props.handleClick(video.id)}
-                                className="sidebar__thumbnail"
                             >
-                                <img
-                                    src={video.image}
-                                    className="sidebar__thumbnail--img"
-                                />
-                                <div className="sidebar__thumbnail--text">
-                                    <h5>{video.title}</h5>
-                                    <p>{video.channel}</p>
-                                </div>
-                            </li>
+                                <li
+                                    key={video.id}
+                                    // onClick={() => props.handleClick(video.id)}
+                                    className="sidebar__thumbnail"
+                                >
+                                    <img
+                                        src={video.image}
+                                        className="sidebar__thumbnail--img"
+                                    />
+                                    <div className="sidebar__thumbnail--text">
+                                        <h5>{video.title}</h5>
+                                        <p>{video.channel}</p>
+                                    </div>
+                                </li>
+                            </Link>
                         ))}
                 </ul>
             </section>

@@ -6,16 +6,39 @@ class ApiVideoThumnbails {
         this.baseUrl = 'https://unit-3-project-api-0a5620414506.herokuapp.com/';
     }
     //get all shows from API
-    async getVideos() {
+    async getAllVideos() {
         let targetURL = `${this.baseUrl}videos/?api_key=${this.apiKey}`;
-        console.log(targetURL);
+        // console.log(targetURL);
+        try {
+            let response = await axios.get(targetURL);
+
+            response.data.sort(function (a, b) {
+                return b.timestamp - a.timestamp;
+            });
+            // console.log(response);
+            return response.data;
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    async getVideo(id) {
+        if (!id) {
+            console.log('ERROR NO ID');
+            //set to default id
+            id = '84e96018-4022-434e-80bf-000ce4cd12b8';
+        }
+
+        let targetURL = `${this.baseUrl}videos/${id}?api_key=${this.apiKey}`;
+        // console.log('getVideo:');
+        // console.log(targetURL);
         try {
             let response = await axios.get(targetURL);
 
             // response.data.sort(function (a, b) {
             //     return b.timestamp - a.timestamp;
             // });
-            console.log(response);
+            console.log(response.data);
             return response.data;
         } catch (error) {
             console.log(error);
