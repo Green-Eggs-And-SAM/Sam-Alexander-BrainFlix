@@ -4,20 +4,21 @@
 
 //=================== Font Faces ===================
 @font-face {
-    font-family: 'Avenir';
-    src: url('../../assets/fonts/AvenirNextLTPro-Regular.otf') format('otf');
+    font-family: Avenir-Opentype;
+    src: url('../../assets/fonts/AvenirNextLTPro-Regular.otf')
+        format('opentype');
     font-weight: 400;
 }
 
 @font-face {
-    font-family: 'Avenir';
-    src: url('../../assets/fonts/AvenirNextLTPro-Demi.otf') format('otf');
+    font-family: Avenir-Opentype;
+    src: url('../../assets/fonts/AvenirNextLTPro-Demi.otf') format('opentype');
     font-weight: 600;
 }
 
 @font-face {
-    font-family: 'Avenir';
-    src: url('../../assets/fonts/AvenirNextLTPro-Bold.otf') format('otf');
+    font-family: Avenir-Opentype;
+    src: url('../../assets/fonts/AvenirNextLTPro-Bold.otf') format('opentype');
     font-weight: 700;
 }
 
@@ -113,7 +114,7 @@
 
 //Page Header
 h1 {
-    font-family: 'Avenir';
+    font-family: Avenir-Opentype;
     font-weight: 700;
     @include Page-Header-Font__Mobile;
     @include tablet {
@@ -123,7 +124,7 @@ h1 {
 
 //Section Header
 h2 {
-    font-family: 'Avenir';
+    font-family: Avenir-Opentype;
     font-weight: 700;
     @include Section-Header-Font__Mobile;
     @include tablet {
@@ -133,7 +134,7 @@ h2 {
 
 //Sub Header
 h3 {
-    font-family: 'Avenir';
+    font-family: Avenir-Opentype;
     font-weight: 600;
 
     @include Subheader-Font__Mobile;
@@ -144,7 +145,7 @@ h3 {
 
 //Footer Copy
 h4 {
-    font-family: 'Avenir';
+    font-family: Avenir-Opentype;
     font-weight: 400;
     @include Footer-Copy__Mobile;
     @include tablet {
@@ -154,7 +155,7 @@ h4 {
 
 //Labels and buttons
 h5 {
-    font-family: 'Avenir';
+    font-family: Avenir-Opentype;
     font-weight: 600;
     @include Body-Bold__Mobile;
     @include tablet {
@@ -164,7 +165,7 @@ h5 {
 
 //Body
 p {
-    font-family: 'Avenir';
+    font-family: Avenir-Opentype;
     font-weight: 400;
     @include Body-Copy__Mobile;
     @include tablet {

@@ -4,7 +4,6 @@
 * {
     // border: 1px dotted green;
     box-sizing: border-box;
-    font-family: sans-serif;
 
     // backup/fallback font in case of failed font load
     // background-color: $brainflix-blue;
@@ -28,6 +27,10 @@ main {
         flex-direction: row;
         padding-top: 0;
     }
+}
+
+a {
+    text-decoration: none;
 }
 
 .description-comments {
