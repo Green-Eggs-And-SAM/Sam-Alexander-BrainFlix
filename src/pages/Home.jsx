@@ -22,11 +22,7 @@ function Home() {
     const apiKey = '555a7a2f-c4c3-4999-a818-a910708938e2';
     const baseUrl = 'https://unit-3-project-api-0a5620414506.herokuapp.com/';
 
-    // const featuredVid = thumbnailAPI.getVideo(
-    //     '84e96018-4022-434e-80bf-000ce4cd12b8'
-    // );
     const { id } = useParams();
-    // console.log(id);
 
     //for video player
     useEffect(() => {

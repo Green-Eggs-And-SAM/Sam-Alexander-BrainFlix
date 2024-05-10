@@ -1,9 +1,12 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Upload.scss';
 
 function Upload() {
     const formRef = useRef(null);
     const navigate = useNavigate();
+    const [titleValid, setTitleValid] = useState(true);
+    const [descriptionValid, setDescriptionValid] = useState(true);
     // const confirmdescriptionRef = useRef(null);
 
     const handleSubmit = () => {
@@ -14,16 +17,22 @@ function Upload() {
         const description = form.description.value;
         console.log(title);
         console.log(description);
-        // TO DO: Add logic to check all fields filled
+
         if (!title) {
             alert('You must fill out the title');
+            setTitleValid(false);
             return;
-        } else if (!description) {
-            alert('You must fill out the desciption');
-            return;
+        } else {
+            setTitleValid(true);
         }
-        // This is where we would make an axios request
-        // to our backend to add the user to our database.
+
+        if (!description) {
+            alert('You must fill out the desciption');
+            setDescriptionValid(false);
+            return;
+        } else {
+            setDescriptionValid(true);
+        }
         alert('Your video is uploading');
         navigate('/');
     };
@@ -33,11 +42,20 @@ function Upload() {
             <h1>UPLOAD PAGE</h1>
             <form ref={formRef}>
                 <label>
-                    TITLE YOUR VIDEO: <input type="text" name="title" />
+                    TITLE YOUR VIDEO:{' '}
+                    <input
+                        type="text"
+                        name="title"
+                        className={`${titleValid ? '' : 'upload__empty'}`}
+                    />
                 </label>
                 <label>
                     ADD A VIDEO DESCRIPTION:{' '}
-                    <input type="text" name="description" />
+                    <input
+                        type="text"
+                        name="description"
+                        className={`${descriptionValid ? '' : 'upload__empty'}`}
+                    />
                 </label>
 
                 <button type="button" onClick={handleSubmit}>
