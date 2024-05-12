@@ -6,6 +6,7 @@
     flex-direction: column;
     padding: 0;
     padding: $mobile-padding;
+    padding-top: 0;
     @include tablet {
         @include tablet-padding;
     }
@@ -28,13 +29,20 @@
     &__thumbnail {
         width: 100%;
         @include tablet {
-            width: 40%;
+            width: 25rem;
+        }
+
+        &--container {
+            @include tablet {
+                width: 40%;
+            }
         }
     }
 
     &__subheader {
         font-family: Avenir-Opentype;
         font-weight: 600;
+        width: 100%;
         @include Body-Bold__Mobile;
         @include tablet {
             @include Body-Bold__Desktop-Tablet;
@@ -44,18 +52,29 @@
 
     &__form {
         width: 100%;
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+
+            // justify-content: space-between;
+        }
     }
 
     &__button-pair-conatiner {
         display: flex;
+        flex-direction: column;
         @include tablet {
             flex-direction: row-reverse;
             justify-content: flex-start;
         }
     }
 
-    &__thumbnail-container {
+    &__main-container {
+        display: flex;
     }
+}
+.input-tall {
+    height: 8rem;
 }
 .button__width {
     width: 100%;
@@ -68,5 +87,18 @@
     display: none;
     @include tablet {
         display: flex;
+    }
+}
+
+.margin-top-gutter {
+    margin-top: 1rem;
+    &__large {
+        margin-top: 2rem;
+    }
+}
+
+.margin-right-gutter {
+    @include tablet {
+        margin-right: 1rem;
     }
 }

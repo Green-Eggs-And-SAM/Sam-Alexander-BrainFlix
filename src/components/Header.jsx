@@ -22,7 +22,7 @@ function Header() {
                             <input
                                 type="text"
                                 className="header__search--textbox"
-                                defaultValue="Search"
+                                placeholder="Search"
                             />
                             <img
                                 src={search}

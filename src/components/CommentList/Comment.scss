@@ -8,6 +8,9 @@
     flex-direction: column;
     &__user {
         padding: 0rem 1rem 1rem 0;
+        @include desktop {
+            padding-right: 2rem;
+        }
         &-icon {
             width: 36px;
             height: 36px;

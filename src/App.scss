@@ -2,7 +2,7 @@
 @use './styles/partials/variables' as *;
 
 * {
-    border: 1px dotted green;
+    // border: 1px dotted green;
     box-sizing: border-box;
 
     // backup/fallback font in case of failed font load
@@ -36,10 +36,8 @@ a {
 textarea,
 input {
     width: 100%;
-    height: 10rem;
-    @include tablet {
-        height: 3rem;
-    }
+    height: 3rem;
+    font-family: 'Avenir-Opentype';
     padding: 1rem;
     border: 1px solid $mercury;
     background-color: $alabaster;
@@ -80,6 +78,7 @@ button {
     }
     &__inverted {
         background-color: white;
+        border-radius: 4px;
         color: $brainflix-blue;
         &:hover {
             background-color: $mercury;
@@ -89,6 +88,9 @@ button {
 
 .description-comments {
     padding-top: 2.5rem;
+    @include desktop {
+        width: 75%;
+    }
 }
 
 //for all the components that are to the immediate left of the sidebar during desktop view

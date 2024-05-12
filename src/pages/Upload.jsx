@@ -47,9 +47,10 @@ function Upload() {
     return (
         <article className="upload">
             <h1>UPLOAD PAGE</h1>
+            <div className="divider hide-divider"></div>
             <section>
-                <div className="upload__main-container">
-                    <div className="upload__thumbnail-container">
+                <div className="upload__main-container ">
+                    <div className="upload__thumbnail--container  margin-top-gutter margin-right-gutter">
                         <h5 className="upload__subheader">VIDEO THUMBNAIL</h5>
                         <img
                             className="upload__thumbnail"
@@ -57,31 +58,37 @@ function Upload() {
                         ></img>
                     </div>
                     <form ref={formRef} className="upload__form">
-                        <label className="upload__subheader">
-                            TITLE YOUR VIDEO:{' '}
-                            <input
-                                type="text"
-                                name="title"
-                                className={`${
-                                    titleValid ? '' : 'upload__empty'
-                                }`}
-                            />
-                        </label>
-                        <label className="upload__subheader">
-                            ADD A VIDEO DESCRIPTION:{' '}
-                            <input
-                                type="text"
-                                name="description"
-                                className={`${
-                                    descriptionValid ? '' : 'upload__empty'
-                                }`}
-                            />
-                        </label>
+                        <div className=" margin-top-gutter">
+                            <label className="upload__subheader">
+                                TITLE YOUR VIDEO:{' '}
+                                <input
+                                    type="text"
+                                    name="title"
+                                    className={`${
+                                        titleValid ? '' : 'upload__empty'
+                                    }`}
+                                    placeholder="Add a title to your video"
+                                />
+                            </label>
+                        </div>
+                        <div className="input-tall margin-top-gutter">
+                            <label className="upload__subheader ">
+                                ADD A VIDEO DESCRIPTION:{' '}
+                                <textarea
+                                    type="text"
+                                    name="description"
+                                    className={`input-tall ${
+                                        descriptionValid ? '' : 'upload__empty'
+                                    }`}
+                                    placeholder="Add a description to your video"
+                                />
+                            </label>
+                        </div>
                     </form>
                 </div>
-                <div className="divider hide-divider"></div>
-                <div className="upload__button-pair-conatiner">
-                    <div className="button__container button__width">
+                <div className="divider hide-divider margin-top-gutter__large"></div>
+                <div className="upload__button-pair-conatiner margin-top-gutter__large">
+                    <div className="button__container button__width margin-top-gutter">
                         <button type="button" onClick={handleSubmit}>
                             PUBLISH
                         </button>
@@ -91,7 +98,7 @@ function Upload() {
                             alt=""
                         />
                     </div>
-                    <Link to={`/`} className="button__width">
+                    <Link to={`/`} className="button__width margin-top-gutter">
                         <button className="button__inverted">CANCEL</button>
                     </Link>
                 </div>
