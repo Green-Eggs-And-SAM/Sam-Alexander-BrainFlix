@@ -2,7 +2,7 @@
 @use './styles/partials/variables' as *;
 
 * {
-    // border: 1px dotted green;
+    border: 1px dotted green;
     box-sizing: border-box;
 
     // backup/fallback font in case of failed font load
@@ -50,6 +50,43 @@ input {
     }
 }
 
+button {
+    width: 100%;
+    background-color: $brainflix-blue;
+    color: white;
+    height: 3rem;
+    border-radius: 4px;
+    border: none;
+    &:hover {
+        background-color: $brainflix-darkblue;
+    }
+}
+
+.button {
+    &__container {
+        position: relative;
+        padding: 0px;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+    &__icon {
+        position: absolute;
+        left: 10px;
+        width: 2em;
+        height: 2em;
+    }
+    &__inverted {
+        background-color: white;
+        color: $brainflix-blue;
+        &:hover {
+            background-color: $mercury;
+        }
+    }
+}
+
 .description-comments {
     padding-top: 2.5rem;
 }
@@ -60,7 +97,10 @@ input {
         padding-right: 1.5rem;
     }
 }
-
+.divider {
+    width: 100%;
+    @include dividing-line-bottom;
+}
 .colour {
     &__mercury {
         color: $mercury;
