@@ -4,8 +4,6 @@ import '../App.scss';
 import CommentList from '../components/CommentList/CommentList';
 import VideoPlayer from '../components/VideoPlayer';
 import VideoDescription from '../components/VideoDescription';
-// import videoThumbnails from '../data/videos.json';
-// import VideosDetails from '../data/video-details.json';
 import SideBar from '../components/SideBar';
 import CommentForm from '../components/CommentList/CommentForm';
 
@@ -79,7 +77,7 @@ function Home() {
     if (isVideoLoading || isSidebarLoading) {
         return (
             <>
-                <h1>LOADING...</h1>
+                <h1 className="loading">LOADING...</h1>
             </>
         );
     }
