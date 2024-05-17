@@ -10,15 +10,11 @@ import CommentForm from '../components/CommentList/CommentForm';
 import axios from 'axios';
 
 function Home() {
-    // console.log(VideosDetails[0]);
     const [featuredVid, setFeaturedVid] = useState([]);
     const [sidebarThumbnails, setSidebar] = useState([]);
-    // const [id, setId] = useState('84e96018-4022-434e-80bf-000ce4cd12b8');
-
     const [isVideoLoading, setVideoLoading] = useState(true);
     const [isSidebarLoading, setSidebarLoading] = useState(true);
 
-    // const baseUrl = 'https://unit-3-project-api-0a5620414506.herokuapp.com/';
     const baseUrl = 'http://localhost:5555/';
     const defaultId = '84e96018-4022-434e-80bf-000ce4cd12b8';
 
@@ -30,7 +26,6 @@ function Home() {
     //for video player
     useEffect(() => {
         const fetchVideo = async (id) => {
-            // console.log(id);
             try {
                 if (!id) {
                     console.log('ERROR NO ID');
@@ -49,17 +44,13 @@ function Home() {
             }
         };
         setVideoLoading(true);
-
-        // console.log(id);
         fetchVideo(id);
     }, [id]);
 
-    //
     useEffect(() => {
         const fetchSidebar = async (id) => {
             console.log(id);
             try {
-                // const targetURL = `${baseUrl}videos?api_key=${apiKey}`;
                 const targetURL = `${baseUrl}videos`;
                 console.log(targetURL);
                 const response = await axios.get(targetURL);

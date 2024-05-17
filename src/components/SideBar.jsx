@@ -1,5 +1,4 @@
 import './SideBar.scss';
-// import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 function SideBar(props) {
@@ -21,7 +20,6 @@ function SideBar(props) {
                             >
                                 <li
                                     key={video.id}
-                                    // onClick={() => props.handleClick(video.id)}
                                     className="sidebar__thumbnail"
                                 >
                                     <img

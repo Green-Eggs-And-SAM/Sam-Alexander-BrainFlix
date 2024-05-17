@@ -11,7 +11,6 @@ function Upload() {
     const [titleValid, setTitleValid] = useState(true);
     const [descriptionValid, setDescriptionValid] = useState(true);
     const baseUrl = 'http://localhost:5555/';
-    // const confirmdescriptionRef = useRef(null);
 
     const postVideo = async (newTitle, newDescription) => {
         try {
