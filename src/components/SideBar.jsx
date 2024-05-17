@@ -1,17 +1,19 @@
 import './SideBar.scss';
-import axios from 'axios';
+// import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 function SideBar(props) {
-    //display all videos except for the featured video
+    //if no id (on home page '/') then exlude defualt video.
+    const id = props.id ? props.id : props.defaultId;
 
+    //display all videos except for the featured video
     return (
         <>
             <section className="sidebar">
                 <h5 className="sidebar__header">NEXT VIDEOS</h5>
                 <ul>
                     {props.videoThumbnails
-                        .filter((video) => video.id !== props.id)
+                        .filter((video) => video.id !== id)
                         .map((video) => (
                             <Link
                                 to={`/video-details/${video.id}`}

@@ -3,15 +3,37 @@ import { useNavigate, Link } from 'react-router-dom';
 import './Upload.scss';
 import defaulThumbnail from '../assets/images/Upload-video-preview.jpg';
 import publishImg from '../assets/icons/publish.svg';
+import axios from 'axios';
 
 function Upload() {
     const formRef = useRef(null);
     const navigate = useNavigate();
     const [titleValid, setTitleValid] = useState(true);
     const [descriptionValid, setDescriptionValid] = useState(true);
+    const baseUrl = 'http://localhost:5555/';
     // const confirmdescriptionRef = useRef(null);
 
-    const handleSubmit = () => {
+    const postVideo = async (newTitle, newDescription) => {
+        try {
+            const targetURL = `${baseUrl}upload`;
+            const defaultThumbnail =
+                'http://localhost:5555/images/imageUpload.jpg';
+
+            const newVideo = {
+                title: newTitle,
+                description: newDescription,
+                image: defaultThumbnail,
+            };
+
+            const response = axios.post(targetURL, newVideo);
+            console.log(response);
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
         // TO DO: Get the DOM object using form ref
         const form = formRef.current;
 
@@ -39,6 +61,10 @@ function Upload() {
             alert('Title and Description must be filled out.');
             return;
         } else {
+            const defaultThumbnail =
+                'http://localhost:5555/images/imageUpload.jpg';
+
+            await postVideo(title, description, defaultThumbnail);
             alert('Your video is uploading');
             navigate('/');
         }

@@ -13,14 +13,19 @@ function Home() {
     // console.log(VideosDetails[0]);
     const [featuredVid, setFeaturedVid] = useState([]);
     const [sidebarThumbnails, setSidebar] = useState([]);
+    // const [id, setId] = useState('84e96018-4022-434e-80bf-000ce4cd12b8');
 
     const [isVideoLoading, setVideoLoading] = useState(true);
     const [isSidebarLoading, setSidebarLoading] = useState(true);
 
-    const apiKey = '555a7a2f-c4c3-4999-a818-a910708938e2';
-    const baseUrl = 'https://unit-3-project-api-0a5620414506.herokuapp.com/';
+    // const baseUrl = 'https://unit-3-project-api-0a5620414506.herokuapp.com/';
+    const baseUrl = 'http://localhost:5555/';
+    const defaultId = '84e96018-4022-434e-80bf-000ce4cd12b8';
 
+    //find id
     const { id } = useParams();
+
+    //or set to default id if found id is undefined.
 
     //for video player
     useEffect(() => {
@@ -30,18 +35,15 @@ function Home() {
                 if (!id) {
                     console.log('ERROR NO ID');
                     //set to default id
-                    id = '84e96018-4022-434e-80bf-000ce4cd12b8';
+                    id = defaultId;
                 }
-                // console.log(id);
-                const targetURL = `${baseUrl}videos/${id}?api_key=${apiKey}`;
-                // console.log(targetURL);
+                const targetURL = `${baseUrl}videos/${id}`;
+
+                console.log(targetURL);
                 const response = await axios.get(targetURL);
-
+                console.log(response);
                 setFeaturedVid(response.data);
-                console.log(featuredVid);
                 setVideoLoading(false);
-
-                // console.log(featuredVid);
             } catch (error) {
                 console.log(error);
             }
@@ -54,24 +56,21 @@ function Home() {
 
     //
     useEffect(() => {
-        const fetchSidebar = async () => {
+        const fetchSidebar = async (id) => {
             console.log(id);
             try {
-                const targetURL = `${baseUrl}videos?api_key=${apiKey}`;
-                // console.log(targetURL);
+                // const targetURL = `${baseUrl}videos?api_key=${apiKey}`;
+                const targetURL = `${baseUrl}videos`;
+                console.log(targetURL);
                 const response = await axios.get(targetURL);
-                console.log(response.data);
                 setSidebar(response.data);
-                console.log(sidebarThumbnails);
                 setSidebarLoading(false);
-
-                console.log(featuredVid);
             } catch (error) {
                 console.log(error);
             }
         };
         setSidebarLoading(true);
-        fetchSidebar();
+        fetchSidebar(id);
     }, []);
 
     if (isVideoLoading || isSidebarLoading) {
@@ -96,7 +95,7 @@ function Home() {
                     <SideBar
                         videoThumbnails={sidebarThumbnails}
                         id={id}
-                        apiKey={apiKey}
+                        defaultId={defaultId}
                     />
                 </main>
             </div>
